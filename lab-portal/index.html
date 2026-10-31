@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#06182a">
+    <meta name="description" content="An interactive learning lab for exploring coastal habitats, wave energy, and careful ocean observations.">
+    <title>Interactive Ocean Lab — Blue Atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lab.css">
+    <script src="js/lab.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="lab-header">
+      <a class="lab-brand" href="../index.html" aria-label="Blue Atlas home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>BLUE<span>ATLAS</span><small>INTERACTIVE OCEAN LAB</small></span>
+      </a>
+      <nav aria-label="Lab navigation">
+        <a class="active" href="index.html">Experiment</a>
+        <a href="more-html/field-guide.html">Field guide</a>
+        <a href="../research.html">Research library</a>
+        <a class="lab-back" href="../index.html">← Main site</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="lab-hero">
+        <div class="lab-hero-image" role="img" aria-label="Deep blue ocean and tropical coast"></div>
+        <div class="lab-hero-overlay"></div>
+        <div class="lab-shell lab-hero-content">
+          <p class="eyebrow"><span></span> BLUE ATLAS / HANDS-ON LEARNING</p>
+          <h1>Small experiments.<br><em>Big blue questions.</em></h1>
+          <p>Explore how habitat, waves, and changing water levels connect. Adjust the model, record an observation, and see how your assumptions shape the result.</p>
+          <a class="hero-jump" href="#wave-lab">Start with the wave lab <b>↓</b></a>
+          <div class="hero-stamp"><span>LEARNING MODEL</span><b>NOT A FORECAST</b></div>
+        </div>
+      </section>
+
+      <section class="lab-shell lab-intro">
+        <p class="eyebrow">01 / EXPERIMENT BOARD</p>
+        <div><h2>Change one thing.<br><em>Notice what follows.</em></h2><p>These browser-based activities are designed to make coastal science concepts easier to explore. They do not use live field data; your saved notes stay in this browser.</p></div>
+      </section>
+
+      <section class="lab-shell experiment-section" id="wave-lab">
+        <div class="section-heading">
+          <div><p class="eyebrow">EXPERIMENT 01 / CONCEPTUAL MODEL</p><h2>Can habitat influence <em>wave energy?</em></h2></div>
+          <span class="experiment-id">BA-LAB / 001</span>
+        </div>
+        <div class="experiment-grid">
+          <form class="control-panel" id="wave-controls">
+            <label class="control-row" for="habitat-type">
+              <span><b>Coastal habitat</b><small>Choose a simplified habitat type</small></span>
+              <select id="habitat-type" name="habitat">
+                <option value="reef">Coral reef</option>
+                <option value="mangrove">Mangrove fringe</option>
+                <option value="seagrass">Seagrass meadow</option>
+              </select>
+            </label>
+            <label class="range-control" for="habitat-width">
+              <span><b>Habitat width</b><output id="width-value" for="habitat-width">250 m</output></span>
+              <input id="habitat-width" name="width" type="range" min="0" max="800" value="250" step="10">
+              <small>0 m <span>Distance water travels through habitat</span> 800 m</small>
+            </label>
+            <label class="range-control" for="wave-height">
+              <span><b>Incoming wave height</b><output id="wave-value" for="wave-height">1.2 m</output></span>
+              <input id="wave-height" name="wave" type="range" min="2" max="30" value="12" step="1">
+              <small>0.2 m <span>Illustrative starting condition</span> 3.0 m</small>
+            </label>
+            <label class="range-control" for="water-level">
+              <span><b>Relative water-level change</b><output id="level-value" for="water-level">+0 cm</output></span>
+              <input id="water-level" name="level" type="range" min="0" max="100" value="0" step="5">
+              <small>0 cm <span>Test a higher-water scenario</span> +100 cm</small>
+            </label>
+            <button class="reset-button" type="reset">Reset experiment <span>↺</span></button>
+          </form>
+
+          <div class="result-panel" aria-live="polite">
+            <div class="result-topline"><span>MODEL OUTPUT / RELATIVE CHANGE</span><span class="live-dot">LIVE</span></div>
+            <canvas id="wave-chart" width="760" height="340" role="img" aria-label="Illustrative wave height before and after the selected habitat"></canvas>
+            <div class="result-stats">
+              <div><span>STARTING WAVE</span><strong id="starting-result">1.20 m</strong></div>
+              <div><span>AFTER HABITAT</span><strong id="ending-result">—</strong></div>
+              <div><span>MODELLED CHANGE</span><strong id="change-result">—</strong></div>
+            </div>
+            <p class="model-caveat"><strong>Learning model, not a forecast.</strong> The simplified relationship is illustrative. Real-world effects depend on habitat condition, water depth, wave period, shoreline shape, and local measurements.</p>
+          </div>
+        </div>
+        <p class="experiment-question"><span>THINK ABOUT IT</span> Which inputs changed the result most? What would you need to measure before applying this idea to a real coast?</p>
+      </section>
+
+      <section class="habitat-strip">
+        <div class="lab-shell habitat-inner">
+          <div><p class="eyebrow">FIELD CONTEXT / HABITATS ARE NOT INTERCHANGEABLE</p><h2>Same ocean.<br><em>Different living edges.</em></h2><p>Each habitat interacts with water in its own way. These images are prompts for observation, not sample sites or verified monitoring records.</p><a class="text-link" href="more-html/field-guide.html">Open the field guide <span>↗</span></a></div>
+          <div class="habitat-images">
+            <figure><img src="../assets/picture/coral-reef.jpg" alt="Coral structures in a blue marine habitat" loading="lazy"><figcaption>REEF / COMPLEX STRUCTURE</figcaption></figure>
+            <figure><img src="../assets/picture/tropical-coast.jpg" alt="Blue water along a tropical coastal landscape" loading="lazy"><figcaption>COAST / PLACE &amp; EXPOSURE</figcaption></figure>
+            <figure><img src="../assets/picture/blue-coast.jpg" alt="Open blue sea meeting a distant coast" loading="lazy"><figcaption>OPEN WATER / WAVE CLIMATE</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="lab-shell observation-section" id="observations">
+        <div class="section-heading">
+          <div><p class="eyebrow">EXPERIMENT 02 / PERSONAL FIELD NOTEBOOK</p><h2>Record an <em>observation.</em></h2><p class="heading-copy">Add a classroom or practice observation. Records are stored locally in this browser and are not uploaded.</p></div>
+          <span class="experiment-id">BA-LAB / 002</span>
+        </div>
+        <form class="observation-form" id="observation-form">
+          <label>Site or classroom label<input name="site" type="text" maxlength="70" placeholder="e.g. North beach transect" required></label>
+          <label>Habitat
+            <select name="habitat" required>
+              <option value="Reef">Reef</option>
+              <option value="Mangrove">Mangrove</option>
+              <option value="Seagrass">Seagrass</option>
+              <option value="Rocky shore">Rocky shore</option>
+              <option value="Other">Other / classroom model</option>
+            </select>
+          </label>
+          <label>What did you observe?<input name="indicator" type="text" maxlength="70" placeholder="e.g. Surface water clarity" required></label>
+          <label>Value<input name="value" type="number" step="any" min="-999999" max="999999" placeholder="e.g. 24" required></label>
+          <label>Unit<input name="unit" type="text" maxlength="16" placeholder="e.g. cm, count" required></label>
+          <label>Date<input name="date" type="date" required></label>
+          <label class="note-field">Context or method note<textarea name="notes" rows="2" maxlength="240" placeholder="Add conditions, method, or uncertainty you want to remember."></textarea></label>
+          <button class="save-button" type="submit">Save local observation <span>＋</span></button>
+        </form>
+        <p class="notebook-status" id="notebook-status" role="status" aria-live="polite"></p>
+        <div class="notebook-toolbar">
+          <label for="habitat-filter">Filter notebook
+            <select id="habitat-filter"><option value="all">All habitats</option><option>Reef</option><option>Mangrove</option><option>Seagrass</option><option>Rocky shore</option><option>Other</option></select>
+          </label>
+          <div><button class="utility-button" id="export-notes" type="button">Export CSV ↓</button><button class="utility-button danger" id="clear-notes" type="button">Clear notebook</button></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Date</th><th>Site</th><th>Habitat</th><th>Observation</th><th>Value</th><th>Context</th><th><span class="sr-only">Actions</span></th></tr></thead>
+            <tbody id="notebook-rows"><tr class="empty-row"><td colspan="7">Your notebook is empty. Add a practice observation to begin.</td></tr></tbody>
+          </table>
+        </div>
+        <p class="privacy-note">LOCAL NOTEBOOK / Stored only in your browser’s local storage. Do not enter personal, sensitive, or confidential location information.</p>
+      </section>
+
+      <section class="next-steps">
+        <div class="lab-shell next-inner"><div><p class="eyebrow">KEEP EXPLORING</p><h2>A good experiment<br>leaves room for <em>questions.</em></h2></div><div><a href="more-html/field-guide.html">Use the field guide ↗</a><a href="../research.html#observations">Read research briefs ↗</a><a href="../field-notes.html#protocol">Visit field notes ↗</a></div></div>
+      </section>
+    </main>
+
+    <footer class="lab-footer">
+      <div class="lab-shell"><a class="lab-brand" href="../index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BLUE<span>ATLAS</span><small>OCEAN RESEARCH INITIATIVE</small></span></a><p>Interactive learning tools / Blue Atlas is a fictional educational concept.</p><a href="../index.html">Back to the main site ↑</a></div>
+    </footer>
+  </body>
+</html>
