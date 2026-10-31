@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/velore@1.0.0/velore.css" integrity="sha384-G2IxRVI5YQgdZiUsE8ysnGHvwm2DsCsZNz5qp7mlCJL5v45vt36vYQF28F6mwd2R" crossorigin="anonymous">
     <link rel="stylesheet" href="css/lab.css">
     <script src="js/lab.js" defer></script>
   </head>
@@ -19,7 +20,7 @@
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
         <span>BLUE<span>ATLAS</span><small>INTERACTIVE OCEAN LAB</small></span>
       </a>
-      <nav aria-label="Lab navigation">
+      <nav class="vl-nav liquid-panel vl-dark vl-thin vl-tint-teal" aria-label="Lab navigation">
         <a class="active" href="index.html">Experiment</a>
         <a href="more-html/field-guide.html">Field guide</a>
         <a href="../research.html">Research library</a>
@@ -51,10 +52,10 @@
           <span class="experiment-id">BA-LAB / 001</span>
         </div>
         <div class="experiment-grid">
-          <form class="control-panel" id="wave-controls">
+          <form class="control-panel liquid-panel vl-card vl-dark" id="wave-controls">
             <label class="control-row" for="habitat-type">
               <span><b>Coastal habitat</b><small>Choose a simplified habitat type</small></span>
-              <select id="habitat-type" name="habitat">
+              <select class="vl-input liquid-input" id="habitat-type" name="habitat">
                 <option value="reef">Coral reef</option>
                 <option value="mangrove">Mangrove fringe</option>
                 <option value="seagrass">Seagrass meadow</option>
@@ -62,23 +63,23 @@
             </label>
             <label class="range-control" for="habitat-width">
               <span><b>Habitat width</b><output id="width-value" for="habitat-width">250 m</output></span>
-              <input id="habitat-width" name="width" type="range" min="0" max="800" value="250" step="10">
+              <input class="liquid-range" id="habitat-width" name="width" type="range" min="0" max="800" value="250" step="10">
               <small>0 m <span>Distance water travels through habitat</span> 800 m</small>
             </label>
             <label class="range-control" for="wave-height">
               <span><b>Incoming wave height</b><output id="wave-value" for="wave-height">1.2 m</output></span>
-              <input id="wave-height" name="wave" type="range" min="2" max="30" value="12" step="1">
+              <input class="liquid-range" id="wave-height" name="wave" type="range" min="2" max="30" value="12" step="1">
               <small>0.2 m <span>Illustrative starting condition</span> 3.0 m</small>
             </label>
             <label class="range-control" for="water-level">
               <span><b>Relative water-level change</b><output id="level-value" for="water-level">+0 cm</output></span>
-              <input id="water-level" name="level" type="range" min="0" max="100" value="0" step="5">
+              <input class="liquid-range" id="water-level" name="level" type="range" min="0" max="100" value="0" step="5">
               <small>0 cm <span>Test a higher-water scenario</span> +100 cm</small>
             </label>
-            <button class="reset-button" type="reset">Reset experiment <span>↺</span></button>
+            <button class="reset-button liquid-control vl-control vl-dark vl-thin vl-tint-teal" type="reset">Reset experiment <span>↺</span></button>
           </form>
 
-          <div class="result-panel" aria-live="polite">
+          <div class="result-panel liquid-panel vl-card vl-dark" aria-live="polite">
             <div class="result-topline"><span>MODEL OUTPUT / RELATIVE CHANGE</span><span class="live-dot">LIVE</span></div>
             <canvas id="wave-chart" width="760" height="340" role="img" aria-label="Illustrative wave height before and after the selected habitat"></canvas>
             <div class="result-stats">
@@ -108,10 +109,10 @@
           <div><p class="eyebrow">EXPERIMENT 02 / PERSONAL FIELD NOTEBOOK</p><h2>Record an <em>observation.</em></h2><p class="heading-copy">Add a classroom or practice observation. Records are stored locally in this browser and are not uploaded.</p></div>
           <span class="experiment-id">BA-LAB / 002</span>
         </div>
-        <form class="observation-form" id="observation-form">
-          <label>Site or classroom label<input name="site" type="text" maxlength="70" placeholder="e.g. North beach transect" required></label>
+        <form class="observation-form liquid-panel vl-card vl-dark" id="observation-form">
+          <label>Site or classroom label<input class="vl-input liquid-input" name="site" type="text" maxlength="70" placeholder="e.g. North beach transect" required></label>
           <label>Habitat
-            <select name="habitat" required>
+            <select class="vl-input liquid-input" name="habitat" required>
               <option value="Reef">Reef</option>
               <option value="Mangrove">Mangrove</option>
               <option value="Seagrass">Seagrass</option>
@@ -119,19 +120,19 @@
               <option value="Other">Other / classroom model</option>
             </select>
           </label>
-          <label>What did you observe?<input name="indicator" type="text" maxlength="70" placeholder="e.g. Surface water clarity" required></label>
-          <label>Value<input name="value" type="number" step="any" min="-999999" max="999999" placeholder="e.g. 24" required></label>
-          <label>Unit<input name="unit" type="text" maxlength="16" placeholder="e.g. cm, count" required></label>
-          <label>Date<input name="date" type="date" required></label>
-          <label class="note-field">Context or method note<textarea name="notes" rows="2" maxlength="240" placeholder="Add conditions, method, or uncertainty you want to remember."></textarea></label>
-          <button class="save-button" type="submit">Save local observation <span>＋</span></button>
+          <label>What did you observe?<input class="vl-input liquid-input" name="indicator" type="text" maxlength="70" placeholder="e.g. Surface water clarity" required></label>
+          <label>Value<input class="vl-input liquid-input" name="value" type="number" step="any" min="-999999" max="999999" placeholder="e.g. 24" required></label>
+          <label>Unit<input class="vl-input liquid-input" name="unit" type="text" maxlength="16" placeholder="e.g. cm, count" required></label>
+          <label>Date<input class="vl-input liquid-input" name="date" type="date" required></label>
+          <label class="note-field">Context or method note<textarea class="vl-input liquid-input" name="notes" rows="2" maxlength="240" placeholder="Add conditions, method, or uncertainty you want to remember."></textarea></label>
+          <button class="save-button liquid-control vl-control vl-dark vl-thin vl-tint-teal" type="submit">Save local observation <span>＋</span></button>
         </form>
         <p class="notebook-status" id="notebook-status" role="status" aria-live="polite"></p>
         <div class="notebook-toolbar">
           <label for="habitat-filter">Filter notebook
-            <select id="habitat-filter"><option value="all">All habitats</option><option>Reef</option><option>Mangrove</option><option>Seagrass</option><option>Rocky shore</option><option>Other</option></select>
+            <select class="vl-input liquid-input" id="habitat-filter"><option value="all">All habitats</option><option>Reef</option><option>Mangrove</option><option>Seagrass</option><option>Rocky shore</option><option>Other</option></select>
           </label>
-          <div><button class="utility-button" id="export-notes" type="button">Export CSV ↓</button><button class="utility-button danger" id="clear-notes" type="button">Clear notebook</button></div>
+          <div><button class="utility-button liquid-control vl-control vl-dark vl-thin vl-tint-teal" id="export-notes" type="button">Export CSV ↓</button><button class="utility-button danger liquid-control vl-control vl-dark vl-thin vl-tint-teal" id="clear-notes" type="button">Clear notebook</button></div>
         </div>
         <div class="table-wrap">
           <table>

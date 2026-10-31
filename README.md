@@ -39,4 +39,4 @@ Blue Atlas is a fictional educational concept, not a real research institution, 
 - `assets/picture/blue-coast.jpg` — Unsplash photo `1559827260-dc66d52bef19`
 - `assets/picture/tropical-coast.jpg` — Unsplash photo `1505142468610-359e7d316be0`
 
-The lab wave model is a simplified educational visualization, not a calibrated forecast or site-specific impact assessment. Notebook observations are stored in browser local storage and can be exported as CSV.
+The lab wave model is a simplified educational visualization, not a calibrated forecast or site-specific impact assessment. Notebook observations are stored in browser local storage and can be exported as CSV. Controls use the [Velore 1.0.0 liquid-glass CSS package](https://www.npmjs.com/package/velore) from a version-pinned [UNPKG CDN](https://unpkg.com/velore@1.0.0/velore.css), with Subresource Integrity and local CSS fallbacks for CDN failure and browsers without `backdrop-filter` support. Velore's MIT license permits this stylesheet-only use without its React components.
