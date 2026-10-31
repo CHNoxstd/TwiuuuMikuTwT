@@ -8,6 +8,11 @@ An original, static ocean-conservation research portal inspired by the immersive
 - `science.html` — research approach, methods, systems framework, and working principles
 - `research.html` — long-form research briefs, illustrative study regions, glossary, and learning resources
 - `field-notes.html` — editorial field note, observation prompts, and partner-centered research practice
+- `publication/index.html` — an original, four-chapter ocean and climate synthesis with references
+- `publication/chapter-01.html` through `chapter-04.html` — detailed chapters on ocean change, ecosystems, risk, and adaptation
+- `zh_cn/`, `mn/`, `ro/`, and `ja/` — translated overview and synthesis chapters in Chinese, Mongolian, Romanian, and Japanese
+- `language/` — shared translation content, page rendering, language routing, and localized styles
+- `assets/tech-text.js` — pointer-responsive, dashed-text effect for the unchanged English homepage hero
 - `lab-portal/index.html` — standalone interactive lab with a coastal wave-concept model and local observation notebook
 - `lab-portal/more-html/field-guide.html` — standalone coastal observation guide
 - `lab-portal/css/lab.css` and `lab-portal/js/lab.js` — lab-only styles and interactive behavior
@@ -29,6 +34,8 @@ Import this directory as a Vercel project. It is a static site and needs no buil
 ## Content and image notes
 
 Blue Atlas is a fictional educational concept, not a real research institution, monitoring program, or dataset. Research briefs are original explanatory summaries and are not peer-reviewed findings or site-specific advice. Suggested citations are included in the portal for further reading. Photography is downloaded from Unsplash; see the [Unsplash License](https://unsplash.com/license). Images are local, while web fonts are loaded from Google Fonts.
+
+The chapter series is independently written and is not an IPCC publication, assessment, or endorsed product; it does not reproduce IPCC report text. Language routes are static files and work on GitHub Pages and Vercel without rewrites or a build step. The homepage retains its original hero wording. Its Tech Text-inspired interaction is implemented locally with CSS and JavaScript; GSAP is loaded from a version-pinned CDN for the entrance fade, with a local fallback. This is not the official React Bits component.
 
 ## Local photography
 

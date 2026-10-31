@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/velore@1.0.0/velore.css" integrity="sha384-G2IxRVI5YQgdZiUsE8ysnGHvwm2DsCsZNz5qp7mlCJL5v45vt36vYQF28F6mwd2R" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="language/locale-switcher.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" integrity="sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc" crossorigin="anonymous" defer></script>
+    <script src="assets/tech-text.js" defer></script>
     <script src="assets/main.js" defer></script>
   </head>
   <body>
@@ -27,7 +30,9 @@
         <a href="science.html">Science</a>
         <a href="research.html">Research portal</a>
         <a href="field-notes.html">Field notes</a>
+        <a href="publication/index.html">AR6 synthesis</a>
         <a href="lab-portal/index.html">Lab portal</a>
+        <label class="language-picker"><span class="sr-only">Choose language</span><select data-language-picker aria-label="Choose language"><option value="en">EN</option><option value="zh_cn">中文</option><option value="mn">MN</option><option value="ro">RO</option><option value="ja">日本語</option></select></label>
         <a class="nav-cta liquid-control vl-control vl-dark vl-thin vl-tint-teal" href="research.html#open-data">Explore the data <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
@@ -38,7 +43,7 @@
         <div class="hero-shade"></div>
         <div class="hero-content wrap">
           <p class="eyebrow"><span class="eyebrow-dot"></span> A living observatory for coastal futures</p>
-          <h1>What if the ocean<br>could help us <em>adapt?</em></h1>
+          <h1 class="tech-text" data-tech-text="What if the ocean|could help us adapt?">What if the ocean<br>could help us <em>adapt?</em></h1>
           <p class="hero-intro">We study the living edges of our blue planet — and the ways healthy seascapes can protect biodiversity, livelihoods, and communities in a changing climate.</p>
           <div class="hero-actions">
             <a class="button button-cyan liquid-control vl-control vl-dark vl-thin vl-tint-teal" href="science.html">Meet the research <span aria-hidden="true">↗</span></a>
@@ -62,6 +67,14 @@
             <p>Blue Atlas brings ecological observation, climate science, and community knowledge into the same conversation. We ask how reefs, wetlands, seagrass meadows, and working coastlines change over time — and what their condition means for people and wildlife.</p>
             <a class="arrow-link" href="science.html">How our science works <span aria-hidden="true">↗</span></a>
           </div>
+        </div>
+      </section>
+
+      <section class="section wrap report-feature">
+        <div class="section-kicker"><span>06 / SYNTHESIS &amp; CHAPTERS</span><span class="kicker-line"></span><span>AR6-INSPIRED LEARNING SERIES</span></div>
+        <div class="report-feature-grid">
+          <div><p class="eyebrow">OCEAN / CLIMATE / COASTAL FUTURES</p><h2>One ocean.<br><em>Many connected chapters.</em></h2></div>
+          <div><p class="lead">Explore an original, evidence-led synthesis about ocean change, coastal ecosystems, risk, and adaptation.</p><p>Organized like a scientific assessment: scope, evidence, uncertainty, regional context, and options for action. This independent learning series is not an IPCC publication and does not reproduce its report text.</p><a class="button button-outline liquid-control vl-control vl-dark vl-thin vl-tint-teal" href="publication/index.html">Browse the report chapters <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
 
